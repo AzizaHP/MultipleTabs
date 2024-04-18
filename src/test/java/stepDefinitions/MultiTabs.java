@@ -51,13 +51,18 @@ public class MultiTabs {
         List<WebElement> priceElements = driver.findElements(By.cssSelector("[class=\"prd_link-product-price css-h66vau\"]"));
         List<WebElement> linkElements = driver.findElements(By.cssSelector("[class=\"pcv3__info-content css-gwkf0u\"]"));
 
-
-               // .getAttribute("href");
+        String []linkText = new String[linkElements.size()];
+        int k=0;
+        for (WebElement element : linkElements) {
+            linkText[k] = element.getAttribute("href");
+            k++;
+        }
 
         for (int i = 0; i < nameElements.size(); i++) {
+            k = i;
             System.out.println("Name of product " + i + ": " + nameElements.get(i).getText());
             System.out.println("Price of product " + i + ": " + priceElements.get(i).getText());
-            System.out.println("Link of product " + i + ": " + linkElements.get(i).getText());
+            System.out.println("Link of product " + k + ": " + linkText[k]);
             String line_spacing = " ";
             System.out.println(line_spacing);
         }
@@ -75,9 +80,6 @@ public class MultiTabs {
         WebElement element = driver.findElement(By.xpath("//*[@id=\"gh-ac\"]"));
         element.sendKeys("iPhone 15 Pro");
         element.sendKeys(Keys.ENTER);
-
-
-
         Thread.sleep(5000);
     }
 
