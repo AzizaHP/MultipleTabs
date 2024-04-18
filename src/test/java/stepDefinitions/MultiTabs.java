@@ -89,4 +89,9 @@ public class MultiTabs {
         driver.findElement(By.xpath("//*[@id=\"s0-60-0-12-8-4-1-0-4[1]-70-39-1-content-menu\"]/li[4]/a")).click();
         Thread.sleep(5000);
     }
+
+    @And("Display the output from ebay in terminal")
+    public void display_output_from_ebay() {
+
+    }
 }
