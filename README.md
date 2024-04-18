@@ -1,4 +1,4 @@
-This repo is build with Java, Selenium, Cucumber with Gherkin languange, Maven, and TestNG. Ensure you have installed those packages to IntelliJ IDEA and installed JDK.
+This repo is build with Java, Selenium, Cucumber with Gherkin languange, Maven, and TestNG. Ensure you have installed those packages to IntelliJ IDEA, chrome driver, and installed JDK.
 
 For test case of this project, can be find in **src > test > resources > MultipleTabs.feature**
 
